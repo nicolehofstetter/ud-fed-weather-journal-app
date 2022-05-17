@@ -30,11 +30,11 @@ function listening() {
     console.log('Server is running');
 }
 
-app.get('/api', function (req, res) {
+app.get('/api/user-entry', function (req, res) {
     res.send(projectData);
 });
 
-app.post('/api/add', function (req, res) {
+app.post('/api/user-entry', function (req, res) {
     let body = req.body;
     projectData = {
         temperature: body.temperature,
