@@ -2,7 +2,7 @@
 const apiKey = '0ef9c9d6a94d15f124e1e66e268c26ee&units=imperial';
 
 const getTemperatureByZip = async (zipCode) => {
-    let url = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipCode + ',de&appid=' + apiKey ;
+    let url = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipCode + '&appid=' + apiKey;
     const response = await fetch(url);
     try {
         const weatherResponse = await response.json();
@@ -15,7 +15,7 @@ const getTemperatureByZip = async (zipCode) => {
 function buildRecentUserEntry(temperature) {
     let userInput = document.getElementById('feelings').value;
     let date = new Date();
-    let newDate = date.getMonth() + '.' + date.getDate() + '.' + date.getFullYear();
+    let newDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
 
     return {
         'temperature': temperature,
