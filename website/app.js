@@ -1,5 +1,5 @@
 /* Global Variables */
-const apiKey = '0ef9c9d6a94d15f124e1e66e268c26ee&units=imperial';
+const apiKey = '<api-key>&units=imperial';
 
 const getTemperatureByZip = async (zipCode) => {
     let url = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipCode + '&appid=' + apiKey;
